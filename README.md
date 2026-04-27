@@ -1,5 +1,6 @@
 # Hospital Dietary Management System
 > A project by Luis Jaco
+>
 > Developed as a final project for CSCI 300: Database Management
 
 The **Hospital Dietary Management System** is a **Java**-based application designed to manage patient dietary records and enforce diet-specific food restrictions. This system ensures that patients are restricted to meal options which align with their prescribed dietary requirements (e.g. renal, diabetic, clear liquid, regular). 
