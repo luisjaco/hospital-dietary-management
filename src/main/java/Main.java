@@ -1,9 +1,9 @@
 import tools.Menu;
 public class Main {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://127.0.0.1:3306/dietary?serverTimezone=UTC";
+        String url = "jdbc:mysql://127.0.0.1:3306/...";
         String user = "root";
-        String password = "LJb78-Top";
+        String password = "";
 
         Menu menu = new Menu();
         menu.setup(url, user, password);
