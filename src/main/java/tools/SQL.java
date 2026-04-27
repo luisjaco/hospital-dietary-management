@@ -3,9 +3,7 @@ package tools;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import tools.Order;
+
 /**
  * Handles all the projects tools.SQL connections and queries.
  */
@@ -53,7 +51,6 @@ public class SQL {
 
         try {
             connection.close();
-            //TODO, remove user information
             System.out.println("[!] Connection successfully closed.");
         } catch (SQLException e) {
             System.out.println("[X] Error closing connection.");

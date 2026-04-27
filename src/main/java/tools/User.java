@@ -14,7 +14,7 @@ public class User {
     private int rank; // 1: patient, 2: employee, 3: admin
     private int id;
     private String username;
-    private String password;
+
     private String firstName;
     private String lastName;
     private Date dob;
@@ -25,7 +25,7 @@ public class User {
         rank = -1;
         id = -1;
         username = null;
-        password = null;
+
         firstName = null;
         lastName = null;
         dob = null;
@@ -42,7 +42,7 @@ public class User {
                 firstName = resultSet.getString("first_name");
                 lastName = resultSet.getString("last_name");
                 username = resultSet.getString("username");
-                password = resultSet.getString("password");
+
                 rank = admin ? 3 : 2;
                 signedIn = true;
             } else { // patient sign-in
@@ -50,7 +50,7 @@ public class User {
                 firstName = resultSet.getString("first_name");
                 lastName = resultSet.getString("last_name");
                 username = resultSet.getString("username");
-                password = resultSet.getString("password");
+
                 dob = resultSet.getDate("dob");
                 rank = 1;
                 signedIn = true;

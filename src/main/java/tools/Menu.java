@@ -1,12 +1,10 @@
 package tools;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-import tools.User;
 public class Menu {
     private Input input;
     private boolean connectedToDB;
@@ -38,14 +36,6 @@ public class Menu {
             switch (user.getRank()) {
                 case -1 -> close(); // user signed out, and used the "exit program option"
                 case 1 -> patientMenu();
-                case 2 -> {
-                    //TODO
-//                employeeMenu();
-                }
-                case 3 -> {
-                    //TODO
-//                adminMenu();
-                }
             }
             // if user reached here, means they've used the "Sign out" option.
             signOut();
@@ -79,7 +69,6 @@ public class Menu {
             System.out.print("""
                     x--------------------------------------------x
                                     PLEASE SIGN IN!
-                    [2] Employee sign-in
                     [1] Patient sign-in
                     [0] Exit program
                     x--------------------------------------------x
@@ -116,32 +105,6 @@ public class Menu {
     }
 
     private void patientMenu() {
-        boolean patientMenuActive = true;
-        while (active && patientMenuActive) {
-            System.out.printf("""
-                    x--------------------------------------------x
-                                        HOME
-                    %s
-                    
-                    [2] Previous orders
-                    [1] Order meal
-                    [0] Sign out
-                    x--------------------------------------------x
-                    """,
-                    user.userCard());
-
-            int response = input.getInt(0, 2);
-            switch (response) {
-                case 2 -> getOrders(user);
-                case 1 -> orderMealPatient();
-                case 0 -> {
-                    signOut();
-                    patientMenuActive = false;
-                }
-            }
-        }
-    }
-    private void employeeMenu() {
         boolean patientMenuActive = true;
         while (active && patientMenuActive) {
             System.out.printf("""
