@@ -2,7 +2,7 @@
 > A project by Luis Jaco
 > Developed as a final project for CSCI 300: Database Management
 
-The **Hospital Dietary Management System** is a **Java**-based application designed to manage patient dietary records and enfore diet-specific food restrictions. This system ensures that patients are restricted to meal options which align with their prescribed dietary requirements (e.g. renal, diabetic, clear liquid, regular). 
+The **Hospital Dietary Management System** is a **Java**-based application designed to manage patient dietary records and enforce diet-specific food restrictions. This system ensures that patients are restricted to meal options which align with their prescribed dietary requirements (e.g. renal, diabetic, clear liquid, regular). 
 
 
 ## Features
@@ -19,7 +19,7 @@ Leveraging **MySQL** and **Java Database Connectivity (JDBC)**, the **Hospital D
 - Order history
 
 ## Database Schema
-![Database schema displaying relations between multple tables used with the Hospital Dietary Management System](./report/schema.png)
+![Database schema displaying relationships between multiple tables used within the Hospital Dietary Management System](./report/schema.png)
 
 ## Usage
 ```java
@@ -29,7 +29,7 @@ public class Main {
         // 1. input MySQL server information.
         String url = "jdbc:mysql://127.0.0.1:3306/...";
         String user = "root";
-        String password = "password";
+        String password = "...";
 
         // 2. Initialize a new Menu class.
         Menu menu = new Menu();
